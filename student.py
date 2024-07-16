@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+
 
 
 # 사이드바에 선택 상자를 생성하여 사용자가 선택할 수 있도록 함
