@@ -2,12 +2,14 @@ import streamlit as st
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
+import json
+key_dict = json.loads(st.secrets["textkey"])
 
 # Fetch the service account key JSON file contents
 
 
 if not firebase_admin._apps:
-    cred = credentials.Certificate('secret.json')
+    cred = credentials.Certificate(key_dict)
     firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://anything-b3eaf-default-rtdb.firebaseio.com/'
 })
